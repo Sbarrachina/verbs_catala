@@ -1,15 +1,8 @@
 function startConjugationGame() {
-    alert('Joc de Conjugació de Verbs - En construcció');
+    window.location.href = '/Completa_frase/frase.html'; // Substitueix per l'URL desitjat
 }
 
-function startMatchingGame() {
-    alert('Joc de Parelles - En construcció');
-}
+function startMatchingGame(){
+    window.location.href = '/parelles/parelles.html'; // Substitueix per l'URL desitjat
 
-function startFillInTheBlankGame() {
-    alert('Completa la Frase - En construcció');
-}
-
-function startVerbTest() {
-    alert('Test de Verbs - En construcció');
 }

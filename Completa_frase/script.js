@@ -2776,3 +2776,4 @@ function closeGameSection() {
 // Assignar l'esdeveniment als botons de tancament
 document.getElementById('close-fill-in-the-blank-game').addEventListener('click', closeGameSection);
 document.getElementById('close-conjugation-game').addEventListener('click', closeGameSection);
+

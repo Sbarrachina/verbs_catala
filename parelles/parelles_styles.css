@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+body {
+    font-family: 'Lora', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+    background-image: url("https://cdn.pixabay.com/photo/2015/09/07/07/01/banner-928216_960_720.jpg");
+    color: #f4f4f4;
+}
+
+header h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.header-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #141516;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.header-button:hover {
+    background-color: #004494;
+}
+
+
+
+#intro {
+    text-align: center;
+    margin: 20px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+main {
+    padding-bottom: 60px; /* Espacio suficiente para el footer */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    color: #f1f1f1;
+    position: relative; /* Cambiado de fixed a relative */
+    width: 100%;
+    bottom: 0;
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url("https://cdn.pixabay.com/photo/2015/09/07/07/01/banner-928216_960_720.jpg");
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(2, 200px);
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 1800px;
+}
+
+.card {
+    background-color: #e2d5d1;
+    background-image: url("https://st4.depositphotos.com/15113232/41385/i/450/depositphotos_413857056-stock-photo-deck-playing-cards-blue-background.jpg");
+    background-size: cover;
+
+    border: 1px solid #0056b3;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.card img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.card p {
+    font-size: 18px;
+    margin: 0;
+}
+
+.card.flipped {
+    background-color: #0056b3;
+    color: white;
+    transform: rotateY(180deg);
+    
+
+}
+
+.card.flipped, .card.matched {
+    background-color: #ec1313;
+    border-color: #ec0f0f;
+    background-image: url("https://img.freepik.com/premium-vector/playing-cards-green-background_859614-26.jpg");
+}
+
+.correct-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(23, 24, 23, 0.8);
+    color: white;
+    font-size: 24px;
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1000;
+    text-align: center;
+}
