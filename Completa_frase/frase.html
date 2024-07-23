@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pràctica de Verbs en Català</title>
+    <link rel="stylesheet" href="styles_frase.css">
+</head>
+<body>
+    <header>
+        <h1>Verbs en Català</h1>
+    </header>
+
+    <section id="intro">
+        <p>Jugar amb els temps verbals </p>
+    </section>
+    <section id="games">
+        <div class="game">
+            <h2>Completa frase</h2>
+            <button onclick="startFillInTheBlankGame()">Comença</button>
+        </div>
+    
+        <div class="game">
+            <h2> tipus text</h2>
+            <button onclick="startConjugationGame()">Comença</button>
+        </div>
+    </section>
+    
+    <section id="fill-in-the-blank-game" class="hidden">
+        <button id="close-fill-in-the-blank-game" class="close-btn">&times;</button>
+        <h2>Completa la Frase</h2>
+        <p id="sentence"></p>
+        <input type="text" id="user-input">
+        <button onclick="checkAnswer()">Comprova</button>
+        <p id="result"></p>
+        <button onclick="nextSentence()">Següent</button>
+    </section>
+    
+    <section id="conjugation-game" class="hidden">
+        <button id="close-conjugation-game" class="close-btn">&times;</button>
+        <h2>Conjugació de Verbs</h2>
+        <p id="conjugation-sentence"></p>
+        <div id="conjugation-options"></div>
+        <p id="conjugation-result"></p>
+        <button onclick="nextConjugation()">Següent</button>
+    </section>
+    
+    
+    
+    
+    <footer>
+        <p>Sbarrachina code 2024</p>
+    </footer>
+
+    <script src="/Completa_frase/script.js"></script>
+</body>
+</html>

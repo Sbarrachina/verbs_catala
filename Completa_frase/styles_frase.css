@@ -1,0 +1,192 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image: url("https://www.creativefabrica.com/wp-content/uploads/2023/09/05/Nature-wallpaper-Graphics-78543985-1.jpg");
+    background-size: cover;
+}
+
+header {
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 5em;
+    text-transform: uppercase;
+}
+
+#intro {
+    text-align: center;
+    padding: 0px;
+    font-size: 4em;
+}
+
+#games {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.game {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    text-align: center;
+}
+
+.game h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.game button {
+    background-color: #151617;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.game button:hover {
+    background-color: #0056b3;
+}
+
+
+.hidden {
+    display: none;
+    
+}
+
+#fill-in-the-blank-game, #conjugation-game {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff3e0;; /* Color de fons per a les opcions */
+
+}
+
+#fill-in-the-blank-game p, #conjugation-game p {
+    font-size: 2.5em;
+}
+
+#user-input, #conjugation-input {
+    padding: 10px;
+    font-size: 2em;
+    width: 50%;
+}
+
+#result, #conjugation-result {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+#fill-in-the-blank-game button, #conjugation-game button {
+    background-color: #0a0a0b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+#fill-in-the-blank-game button:hover, #conjugation-game button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Estils per al joc de Conjugació de Verbs */
+#conjugation-game {
+    text-align: center;
+    padding: 20px;
+    background-color: #fff3e0; /* Color de fons diferent */
+}
+
+#conjugation-game p {
+    font-size: 2.5em;
+}
+
+#conjugation-options {
+    /* margin: 20px 0; */
+    display: flex;
+    flex-wrap: wrap; /* Permet que les opcions passin a la següent línia si no hi ha prou espai */
+    justify-content: center; /* Centra les opcions horitzontalment */
+    width: 50%; /* Ocupar el 50% de l'ample del contenidor principal */
+    margin: 0 auto; /* Centrar el contenidor dins del seu pare */
+    font-size: 1.2em;
+}
+
+.option {
+    background-color: #e2d5d1; /* Color de fons per a les opcions */
+    border: 1px solid #0056b3;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px; /* Espai entre opcions */
+    cursor: pointer;
+    width: 200px; /* Ample fix per a les opcions, ajusta segons sigui necessari */
+    text-align: center; /* Centrar el text dins de les opcions */
+    box-sizing: border-box; /* Incloure el padding i el border dins de l'ample total */
+}
+
+.option:hover {
+    background-color: #0056b3;
+    color: #fff;
+}
+
+.selected {
+    background-color: #0056b3; /* Color de fons per a l'opció seleccionada */
+    color: #fff;
+
+}
+
+/* Estils per al botó de tancament */
+.close-btn {
+    position: absolute;
+    top: 10px; /* Ajusta la posició segons sigui necessari */
+    right: 10px; /* Ajusta la posició segons sigui necessari */
+    background: none;
+    border: none;
+    font-size: 20px; /* Mida de la "x" */
+    color: #333; /* Color de la "x" */
+    cursor: pointer;
+    outline: none;
+    z-index: 1000; /* Assegura que el botó està per sobre de la resta del contingut */
+}
+
+.close-btn:hover {
+    color: #ff0000; /* Canvia el color al passar el ratolí per sobre */
+}
+
+/* Estils per al contenidor del joc */
+#fill-in-the-blank-game, #conjugation-game {
+    position: relative; /* Permet que el botó de tancament es posicioni relativament */
+    width: 90%; /* Ajusta l'ample si és necessari */
+    margin: 0 auto; /* Centra el contenidor */
+    padding: 20px; /* Afegir espai al voltant del contingut */
+  
+    border: 1px solid #ccc; /* Opcional: borda al voltant del contenidor */
+    border-radius: 8px; /* Opcional: borda arrodonida */
+}
+
+footer {
+    background-color: #333; /* Color de fons del footer */
+    color: #fff; /* Color del text */
+    text-align: center; /* Centra el text horitzontalment */
+    padding: 2px; /* Espai interior */
+    position: fixed; /* Fixa el footer a la part inferior */
+    bottom: 0; /* Posiciona el footer a la part inferior */
+    width: 100%; /* Fa que el footer ocupi tot l'ample de la pàgina */
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.2); /* Ombratge per a un efecte de profunditat */
+    text-transform: uppercase;
+}
