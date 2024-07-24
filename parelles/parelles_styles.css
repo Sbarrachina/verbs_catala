@@ -99,7 +99,7 @@ footer {
     justify-content: center;
     width: 100%;
     height: 100%;
-    font-size: 18px;
+    font-size: 25px;
     text-transform: uppercase;
 }
 
@@ -140,3 +140,125 @@ footer {
     z-index: 1000;
     text-align: center;
 }
+
+
+.benvinguda{
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+}
+
+.benvinguda2{
+    text-align: center;
+    padding: 10px;
+    font-size: 22px;
+    text-transform: uppercase;
+}
+
+
+
+/* frases fetes + verbs */
+#practice-section {
+    padding: 20px;
+    background-color: #f9f9f9; /* Fons suau */
+    margin: 20px auto; /* Centrat amb marges ajustats */
+    width: 90vw; /* Amplada màxima */
+    border-radius: 8px; /* Arrodoniment de les cantonades */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombratge més destacat */
+}
+
+/* Secció de frases i verbs */
+#phrase-game {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#phrases, #verbs {
+    width: 48%; /* Amplada ajustada per a una millor distribució */
+}
+
+#phrases h3, #verbs h3 {
+    text-transform: uppercase;
+    color: #333; /* Color de text neutre */
+    margin-bottom: 15px; /* Espai per sota dels títols */
+}
+
+#phrases {
+    margin-right: 4%; /* Espai entre les seccions */
+}
+
+/* Estils per a les frases */
+.phrase-item {
+    margin-bottom: 20px; /* Espai entre les frases */
+}
+
+.phrase-item p {
+    margin: 0;
+    font-size: 1.2em; /* Mida del text per a frases més grans */
+    line-height: 1.6; /* Espai entre línies per a millorar la llegibilitat */
+    color: #333; /* Color de text neutre */
+}
+
+/* Espais en blanc */
+.blank {
+    border-bottom: 2px solid #007bff; /* Línia destacada */
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.2¡em; /* Mida del text per als espais en blanc ajustada */
+    color: #007bff; /* Color del text per als espais en blanc */
+    padding: 2px 4px; /* Espai dins dels espais en blanc */
+    background-color: #f0f8ff; /* Fons suau per als espais en blanc */
+}
+
+/* Botons de verbs */
+.verb-button {
+    margin: 4px 0; /* Espai entre els botons */
+    padding: 10px 15px; /* Ample i alt ajustats */
+    background-color: #007bff; /* Color de fons viu */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em; /* Mida del text ajustada per a una millor llegibilitat */
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    width: 15vw;
+}
+
+.verb-button:hover {
+    background-color: #d4edda;   
+    color: #141516;
+}
+
+
+/* Estil per als botons seleccionats */
+.verb-button.selected {
+    background-color: #6c757d; /* Color de fons per als botons seleccionats */
+    /* Puedes ajustar el color a lo que prefieras */
+}
+
+
+
+#feedback {
+    margin-top: 20px; /* Marge superior ajustat */
+    font-weight: bold;
+    font-size: 1.2em; /* Mida del text ajustada per al feedback */
+    background-color: #d4edda; /* Color de fons per al feedback positiu */
+    border: 1px solid #c3e6cb; /* Borde suau */
+    border-radius: 5px; /* Arrodoniment de les cantonades */
+    color: #155724; /* Color de text adequat per al feedback positiu */
+    text-align: center;
+
+}
+
+/* Pantalles petites (mòbils) */
+@media (max-width: 600px) {
+    .verb-button {
+        padding: 8px 12px; /* Menys padding per pantalles petites */
+        font-size: 0.9em; /* Mida del text ajustada */
+        width: 20vw; /* Amplada ajustada per a millor visualització en mòbils */
+    }
+}
+
+

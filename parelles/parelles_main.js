@@ -17,10 +17,10 @@ const cards = [
 
     { img: "/parelles/img/img-7.jpg", verb:"parli",tense: "present_subjunctive" },
     { img: "/parelles/img/img-8.jpg",verb:"parlés", tense: "imperfect_subjunctive" },
-    { img: "/.jpg", verb: "estigui", tense: "present_subjunctive" },
-    { img: "/.jpg", verb: "estigués", tense: "imperfect_subjunctive" },
-    { img: "/.jpg", verb: "faci", tense: "present_subjunctive" },
-    { img: "/.jpg", verb: "fes", tense: "imperfect_subjunctive" },
+    { img: "/parelles/img/img-9.jpg", verb: "estigui", tense: "present_subjunctive" },
+    { img: "/parelles/img/img-10.jpg", verb: "pensés", tense: "imperfect_subjunctive" },
+    { img: "/parelles/img/img-11.jpg", verb: "escrigui", tense: "present_subjunctive" },
+    { img: "/parelles/img/img-12.jpg", verb: "fes", tense: "imperfect_subjunctive" },
 
 
 
@@ -29,8 +29,8 @@ const cards = [
     { verb: "parli", tense: "present_subjunctive" },
     { verb: "parlés", tense: "imperfect_subjunctive" },
     { verb: "estigui", tense: "present_subjunctive" },
-    { verb: "estigués", tense: "imperfect_subjunctive" },
-    { verb: "faci", tense: "present_subjunctive" },
+    { verb: "pensés", tense: "imperfect_subjunctive" },
+    { verb: "escrigui", tense: "present_subjunctive" },
     { verb: "fes", tense: "imperfect_subjunctive" }
 ];
 

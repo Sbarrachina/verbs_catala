@@ -1,26 +1,134 @@
 <!DOCTYPE html>
 <html lang="ca">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Joc de Memòria de Verbs</title>
-    <link rel="stylesheet" href="parelles_styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="parelles_styles.css" />
+  </head>
+  <body>
     <header>
-        <h1>Màquina dels verbs</h1>
-        <a href="/index.html" class="header-button">tornar a la pàgina principal</a>
-
+      <h1>Màquina dels verbs</h1>
+      <a href="/index.html" class="header-button"
+        >tornar a la pàgina principal</a
+      >
     </header>
-    
+
     <section id="game-section">
-        <div id="game-board"></div>
+      <div class="benvinguda">
+        <h2>
+          Troba la parella perfecta! Associa formes verbals en català
+          amb imatges que representin les accions corresponents.
+        </h2>
+      </div>
+      <div id="game-board"></div>
     </section>
-    
+
+    <!-- Frases fetes + verbs joc  -->
+
+    <section id="practice-section">
+      <div class="benvinguda2">
+        <h2>Practica els teus verbs amb frases!</h2>
+      </div>
+      <div id="phrase-game">
+        <div id="phrases">
+          <h3>Completa les frases:</h3>
+
+          <div class="phrase-item">
+            <p id="phrase-1">Ella sempre intenta <span class="blank" data-verb="fa">_____</span> el desentès.</p>
+        </div>
+          <div class="phrase-item">
+            <p id="phrase-2">
+              L'alumne <span class="blank" data-verb="entén">_____</span> la lliço ràpidament.
+            </p>
+          </div>
+          <div class="phrase-item">
+            <p id="phrase-3">
+              Ell
+              <span class="blank" data-verb="explica">_____</span> la situació amb detall. 
+            </p>
+          </div>
+          <div class="phrase-item">
+            <p id="phrase-4">
+              Nosaltres <span class="blank" data-verb="convidem">_____</span> els amics a la festa d'aniversari.
+            </p>
+          </div>
+          <div class="phrase-item">
+            <p id="phrase-5">
+              L’equip ha 
+              <span class="blank" data-verb="aconseguit">_____</span> els objectius
+              proposats.
+            </p>
+          </div>
+          <div class="phrase-item">
+            <p id="phrase-6">
+              Hem de  <span class="blank" data-verb="decidir">_____</span> quin camí seguir.
+            </p>
+          </div>
+          <div class="phrase-item">
+            <p id="phrase-7">
+              Ells
+              <span class="blank" data-verb="construïen">_____</span> una casa nova al camp. 
+            </p>
+          </div>
+          <div class="phrase-item">
+            <p id="phrase-8">
+              Jo
+              <span class="blank" data-verb="estudio">_____</span> cada nit per preparar els exàmens.
+            </p>
+          </div>
+          <div class="phrase-item">
+            <p id="phrase-9">
+              Ells <span class="blank" data-verb="parlen">_____</span> amb el client per solucionar la 
+              incidència
+            </p>
+          </div>
+          <div class="phrase-item">
+            <p id="phrase-10">
+              Ells <span class="blank" data-verb="dirigeixen">_____</span> el projecte amb molta cura.
+            </p>
+          </div>
+
+          <div class="phrase-item">
+            <p id="phrase-11">Ells <span class="blank" data-verb="creaven">_____</span> un nou
+            producte per al mercat.
+            </p>
+        </div>
+        <div class="phrase-item">
+            <p id="phrase-12">Nosaltres <span class="blank" data-verb="recollíem">_____</span> els documents necessaris 
+                per a la reunió.</p>
+        </div>
+        
+          
+        </div>
+        <div id="verbs">
+          <h3>Selecciona el verb correcte:</h3>
+          <button class="verb-button" data-verb="convidem">convidar</button>
+          <button class="verb-button" data-verb="aconseguit">aconseguir</button>
+          <button class="verb-button" data-verb="decidir">decidir</button>
+          <button class="verb-button" data-verb="dirigeixen">dirigir</button>
+          <button class="verb-button" data-verb="creaven">crear</button>
+          <button class="verb-button" data-verb="fa">fer</button>
+          <button class="verb-button" data-verb="recollien">recollir </button>
+          <button class="verb-button" data-verb="construïen">construir</button>
+          <button class="verb-button" data-verb="entén">entendre</button>
+          <button class="verb-button" data-verb="estudio">estudiar</button>
+          <button class="verb-button" data-verb="explica">explicar</button>
+          <button class="verb-button" data-verb="parlen">parlar</button>
+        
+
+          <!-- Més verbs aquí -->
+        </div>
+        <div id="feedback"></div>
+
+      </div>
+    </section>
+
     <footer>
-        <p>Sbarrachina code 2024</p>
+      <p>Sbarrachina code 2024</p>
     </footer>
-    
+
     <script src="parelles_main.js"></script>
-</body>
+    <script src="phrase_game.js"></script>
+  </body>
 </html>
