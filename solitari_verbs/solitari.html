@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solitari dels Verbs</title>
+    <link rel="stylesheet" href="solitari_styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
+</head>
+<body>
+    <div id="game-container">
+        <h1>Solitari dels Verbs</h1>
+        <div id="verb-to-order">Selecciona un verb</div>
+        <div id="instructions">Arrossega les cartes entre les piles per formar les seqüències verbals correctes segons el temps verbal.</div>
+        <div id="piles">
+            <div class="pile" data-tense="present">
+                <h2>Present</h2>
+            </div>
+            <div class="pile" data-tense="imperfecte">
+                <h2>Imperfecte</h2>
+            </div>
+            <div class="pile" data-tense="futur">
+                <h2>Futur</h2>
+            </div>
+        </div>
+        <div id="deck">
+            <!-- Les cartes es generaran aquí -->
+        </div>
+        <button id="reset-button">Reiniciar Joc</button>
+    </div>
+    <script src="main_solitari.js"></script>
+</body>
+</html>

@@ -202,7 +202,6 @@ footer {
 
 /* Espais en blanc */
 .blank {
-    border-bottom: 2px solid #007bff; /* Línia destacada */
     cursor: pointer;
     font-weight: bold;
     font-size: 1.2¡em; /* Mida del text per als espais en blanc ajustada */
@@ -241,14 +240,16 @@ footer {
 
 
 #feedback {
-    margin-top: 20px; /* Marge superior ajustat */
+    margin-top: 40px; /* Marge superior ajustat */
     font-weight: bold;
     font-size: 1.2em; /* Mida del text ajustada per al feedback */
     background-color: #d4edda; /* Color de fons per al feedback positiu */
-    border: 1px solid #c3e6cb; /* Borde suau */
     border-radius: 5px; /* Arrodoniment de les cantonades */
     color: #155724; /* Color de text adequat per al feedback positiu */
     text-align: center;
+    width: 30vw;
+    
+    
 
 }
 
