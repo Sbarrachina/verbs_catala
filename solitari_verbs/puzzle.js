@@ -313,3 +313,4 @@ function checkCompletion() {
         alert('Felicitats! Has completat el puzle correctament.');
     }
 }
+
