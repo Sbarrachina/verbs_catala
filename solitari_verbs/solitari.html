@@ -6,12 +6,20 @@
     <title>Solitari dels Verbs</title>
     <link rel="stylesheet" href="solitari_styles.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap">
+  
+
 </head>
 <body>
     <div id="game-container">
-        <h1>Solitari dels Verbs</h1>
-        <div id="verb-to-order">Selecciona un verb</div>
+        <h1>persones i verbs</h1>
+        <a href="/index.html" class="header-button"
+        >tornar a la pàgina principal</a
+      >
         <div id="instructions">Arrossega les cartes entre les piles per formar les seqüències verbals correctes segons el temps verbal.</div>
+          
+        <h1>SUBJUNTIU</h1>
+        <div id="verb-to-order">Selecciona un verb</div>
+
         <div id="piles">
             <div class="pile" data-tense="present">
                 <h2>Present</h2>
@@ -20,7 +28,7 @@
                 <h2>Imperfecte</h2>
             </div>
             <div class="pile" data-tense="futur">
-                <h2>Futur</h2>
+                <h2>Perfet</h2>
             </div>
         </div>
         <div id="deck">
@@ -28,6 +36,68 @@
         </div>
         <button id="reset-button">Reiniciar Joc</button>
     </div>
+
+    <section class="body2">
+        
+        <div id="game-container_puzzle">
+            <h1>Trencaclosques verbals</h1>
+            <div id="verb-selection">
+                <label for="verbs">Selecciona un verb:</label>
+                <select id="verbs">
+                    <option value="cantar">Cantar</option>
+                    <option value="córrer">Córrer</option>
+                    <option value="beure">Beure</option>
+                    <option value="tenir">Tenir</option>
+                    <option value="fer">Fer</option>
+                    <option value="anar">Anar</option>
+                    <option value="dir">Dir</option>
+                    <option value="venir">Venir</option>
+                    <option value="dormir">Dormir</option>
+                    <option value="escriure">Escriure</option>
+                    <option value="creure">Creure</option>
+                    <option value="saber">Saber</option>
+                    <option value="poder">Poder</option>
+                    <option value="sortir">Sortir</option>
+                    <option value="conèixer">Conèixer</option>
+                    <option value="pensar">Pensar</option>
+                    <option value="trobar">Trobar</option>
+                    <option value="portar">Portar</option>
+                    <option value="lluitar">Lluitar</option>
+                    <option value="viure">Viure</option>
+                    <option value="viatjar">Viatjar</option>
+                    <option value="tornar">Tornar</option>
+                    <option value="explicar">Explicar</option>
+                    <option value="enviar">Enviar</option>
+                    <option value="pintar">Pintar</option>
+                    <option value="col·locar">Col·locar</option>
+                    <option value="obrir">Obrir</option>
+                    <option value="descobrir">Descobrir</option>
+                    <option value="decidir">Decidir</option>
+                    <option value="comprar">Comprar</option>
+                    <!-- Afegeix més verbs aquí -->
+                </select>
+                <button id="start-game">Començar</button>
+            </div>
+            <div id="puzzle-board">
+                <div class="drop-zone" data-tense="present-indicatiu">Present Indicatiu</div>
+                <div class="drop-zone" data-tense="imperfect-indicatiu">Imperfect Indicatiu</div>
+                <div class="drop-zone" data-tense="futur-indicatiu">Futur Indicatiu</div>
+                <div class="drop-zone" data-tense="present-subjuntiu">Present Subjuntiu</div>
+                <div class="drop-zone" data-tense="imperfect-subjuntiu">Imperfect Subjuntiu</div>
+                <div class="drop-zone" data-tense="imperatiu">Imperatiu</div>
+            </div>
+            <div id="pieces-container">
+                <!-- Les peces del puzle es generaran dinàmicament -->
+            </div>
+        </div>
+
+</section>
+
+<footer>
+    SbarrachinaCode 2024
+</footer>
+
     <script src="main_solitari.js"></script>
+    <script src="puzzle.js"></script>
 </body>
 </html>
