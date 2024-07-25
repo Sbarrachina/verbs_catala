@@ -128,33 +128,30 @@ const verbs = {
         'deixar': ['deixaré', 'deixaràs', 'deixarà', 'deixarem', 'deixareu', 'deixaran']
     }
 };
-
-
 let currentVerb = '';
-let currentTenses = [];
+let allForms = [];
 
+// Funció per inicialitzar el joc
 function initGame() {
-    // Generar un verb aleatori a ordenar
-    setRandomVerb();
+    setRandomVerb(); // Estableix un verb aleatori
 
     const piles = document.querySelectorAll('.pile');
     const allCards = [];
 
-    // Generar cartes per al verb actual
+    // Recollir totes les formes verbals dels diferents temps
     Object.keys(verbs).forEach(tense => {
-        currentTenses.forEach(form => {
-            allCards.push({ form, tense });
-        });
+        const forms = verbs[tense][currentVerb];
+        allForms.push(...forms.map(form => ({ form, tense })));
     });
 
-    // Barallar cartes
-    shuffleArray(allCards);
+    // Barallar les formes verbals globalment
+    shuffleArray(allForms);
 
     // Distribuir cartes aleatòriament a les piles
     piles.forEach(pile => {
         pile.innerHTML = '<h2>' + pile.querySelector('h2').textContent + '</h2>'; // Mantén el h2 existent
         const tense = pile.dataset.tense;
-        const relevantCards = allCards.filter(card => card.tense === tense).slice(0, 6);
+        const relevantCards = allForms.filter(card => card.tense === tense).slice(0, 6); // Mostra 4 cartes per pila
 
         relevantCards.forEach(cardInfo => {
             const card = document.createElement('div');
@@ -162,6 +159,7 @@ function initGame() {
             card.textContent = cardInfo.form;
             card.draggable = true;
             card.dataset.tense = cardInfo.tense;
+            card.dataset.form = cardInfo.form; // Atribut de dades únic
             card.addEventListener('dragstart', handleDragStart);
             card.addEventListener('dragend', handleDragEnd);
             pile.appendChild(card);
@@ -169,25 +167,35 @@ function initGame() {
     });
 
     // Afegir events a les piles
+    addPileEvents();
+}
+
+// Afegir events a les piles
+function addPileEvents() {
+    const piles = document.querySelectorAll('.pile');
     piles.forEach(pile => {
         pile.addEventListener('dragover', handleDragOver);
         pile.addEventListener('drop', handleDrop);
     });
 }
 
+// Funció per manejar l'inici de l'arrossegament
 function handleDragStart(e) {
     e.dataTransfer.setData('text/plain', e.target.textContent);
     e.target.classList.add('dragging');
 }
 
+// Funció per manejar la fi de l'arrossegament
 function handleDragEnd(e) {
     e.target.classList.remove('dragging');
 }
 
+// Funció per manejar l'arrossegament sobre una pila
 function handleDragOver(e) {
     e.preventDefault();
 }
 
+// Funció per manejar la caiguda d'una carta sobre una pila
 function handleDrop(e) {
     e.preventDefault();
     const pile = e.target.closest('.pile');
@@ -202,6 +210,7 @@ function handleDrop(e) {
     }
 }
 
+// Funció per validar les piles
 function validatePiles() {
     const piles = document.querySelectorAll('.pile');
     piles.forEach(pile => {
@@ -225,6 +234,7 @@ function validatePiles() {
     });
 }
 
+// Funció per obtenir l'ordre correcte de les cartes segons el temps
 function getCorrectOrder(tense) {
     switch (tense) {
         case 'present': return verbs.present[currentVerb];
@@ -234,6 +244,7 @@ function getCorrectOrder(tense) {
     }
 }
 
+// Funció per barallar les cartes
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -241,10 +252,11 @@ function shuffleArray(array) {
     }
 }
 
+// Funció per establir un verb aleatori
 function setRandomVerb() {
     const verbKeys = Object.keys(verbs.present);
     currentVerb = verbKeys[Math.floor(Math.random() * verbKeys.length)];
-    currentTenses = [
+    allForms = [
         ...verbs.present[currentVerb],
         ...verbs.imperfecte[currentVerb],
         ...verbs.futur[currentVerb]
@@ -253,7 +265,11 @@ function setRandomVerb() {
     document.getElementById('verb-to-order').textContent = `Ordena el verb: ${currentVerb}`;
 }
 
+// Funció per reiniciar el joc
 function resetGame() {
     setRandomVerb();
     initGame(); // Re-inicialitza el joc amb el nou verb
 }
+
+// Inicialitzem el joc quan la pàgina es carrega
+document.addEventListener('DOMContentLoaded', initGame);
