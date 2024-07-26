@@ -4,23 +4,39 @@ body {
     padding: 0;
     background-color: #f0f0f0;
     color: #333;
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs_UrV8zpEIOkqcyGiUTIExBl3QObwriJxQQ&s");
+    background-size: cover;
 }
 
 header {
-    background-color: #007bff;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 30px;
+    background: linear-gradient(135deg, #edf0f1, #0b81b8); /* Degradado azul suave */
+
 }
 
 h1 {
     margin: 0;
     font-size: 2em;
+    font-size: 70px;
+
+    text-transform: uppercase;
+    color: #ffffff; /* Texto blanco */
+    text-shadow: 4px 4px 0 #000000, /* Sombra negra para el efecto de cómic */
+                 -2px -2px 0 #000000,
+                 2px -2px 0 #000000,
+                 -2px 2px 0 #000000,
+                 2px 2px 0 #000000; 
+    font-weight: 700; /* Negrita para mayor impacto */
 }
 
 #intro {
+
     text-align: center;
-    padding: 20px;
+    padding: 10px;
+    font-size: 24px;
+    color: #171515;
 }
 
 #games {
@@ -34,30 +50,57 @@ h1 {
 }
 
 .game {
-    background-color: #fff;
-    border: 1px solid #ccc;
+    background: linear-gradient(135deg, #edf0f1, #c1e1f0); /* Degradado azul suave */
+    border: 1px solid #ddd; /* Color de borde más suave */
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width:500px;
+    border-radius: 12px; /* Bordes ligeramente más redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra más pronunciada */
+    width: 700px;
     text-align: center;
+    height: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el transform y la sombra */
 }
 
+.game:hover {
+    transform: scale(1.05); /* Aumento del tamaño al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el ratón */
+}
+
+
 .game h2 {
-    font-size: 1.5em;
+    font-size: 2.5em;
     margin-bottom: 10px;
+
+    
 }
 
 .game button {
     background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 20px 50px;
     border-radius: 5px;
     cursor: pointer;
     text-transform: uppercase;
+    justify-content: first baseline;
+    margin-top: 40px;
+    font-size: 18px;
+
 }
 
 .game button:hover {
     background-color: #0056b3;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #171515;
+    background: linear-gradient(135deg, #edf0f1, #0b81b8); /* Degradado azul suave */
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: auto; /* Assegura que el footer es mantingui a la part inferior */
+    width: 100%; /* Amplada completa */
+
+    
 }
