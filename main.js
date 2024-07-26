@@ -11,3 +11,8 @@ function personetMatchingGame(){
     window.location.href = '/solitari_verbs/solitari.html'; // Substitueix per l'URL desitjat
 
 }
+
+function pronomVerbTest(){
+    window.location.href = '/pronoms/pronoms.html'; // Substitueix per l'URL desitjat
+
+}

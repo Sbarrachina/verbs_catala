@@ -1,0 +1,133 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    color: #171515;
+}
+
+header h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+
+.benvinguda h2{
+    text-align: center;
+    padding: 10px;
+    font-size: 25px;
+    color: #171515;
+}
+
+#pronoun-game {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 80%;
+    margin: 40px auto;
+    padding: 20px;
+    width: 100%;
+}
+
+#pronoun-game h2{
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+
+
+h2 {
+    color: #4a90e2;
+    text-align: center;
+}
+
+#pronoun-sentence {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#pronoun-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+button.option-btn {
+    background-color: #eee7e5; /* Color de fons per a les opcions */
+    color: rgb(18, 16, 16);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    flex: 1 1 30%;
+    max-width: 200px;
+    text-transform: uppercase;
+
+    border: 1px solid #080808;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px; /* Espai entre opcions */
+    cursor: pointer;
+    text-align: center; /* Centrar el text dins de les opcions */
+    box-sizing: border-box; /* Incloure el padding i el border dins de l'ample total */
+}
+
+button.option-btn:hover {
+    background-color: #357ab8;
+    color: #f4f4f9;
+}
+
+#pronoun-result {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#next-button {
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+}
+
+#next-button:hover {
+    background-color: #357ab8;
+}
+
+
+.header-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    background-color: #141516;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.header-button:hover {
+    background-color: #004494;
+}
